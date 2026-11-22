@@ -26,6 +26,10 @@ I turned a design prototype into a working portal for architectural reviews. Cli
 
 I built out a mobile-first workspace where the team saves visual references, develops ideas, and tracks how published posts perform. I implemented live board updates with Server-Sent Events, along with social imports and video previews.
 
+## GitHub activity
+
+![3D calendar of GitHub contributions over the past year](./profile-3d-contrib/profile-night-view.svg)
+
 ---
 
 **Discord** · `@hrishikesh`
