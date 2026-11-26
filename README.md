@@ -28,7 +28,9 @@ I built out a mobile-first workspace where the team saves visual references, dev
 
 ## GitHub activity
 
-![3D calendar of GitHub contributions over the past year](./profile-3d-contrib/profile-night-view.svg)
+![Six-month isometric GitHub commit calendar](./profile-metrics/calendar.svg)
+
+![GitHub account metrics](./profile-metrics/account.svg)
 
 ---
 
