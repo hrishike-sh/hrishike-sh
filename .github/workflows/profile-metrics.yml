@@ -1,0 +1,40 @@
+name: GitHub profile metrics
+
+"on":
+  push:
+    paths:
+      - .github/workflows/profile-metrics.yml
+  schedule:
+    - cron: "29 21 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-metrics
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    if: github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    steps:
+      - name: Render account metrics
+        uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: ${{ github.repository_owner }}
+          filename: profile-metrics/account.svg
+          base: header, activity, community, repositories
+          config_timezone: Asia/Kolkata
+      - name: Render six-month commit calendar
+        uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: ${{ github.repository_owner }}
+          filename: profile-metrics/calendar.svg
+          base: ""
+          plugin_isocalendar: "yes"
+          plugin_isocalendar_duration: half-year
+          config_timezone: Asia/Kolkata
