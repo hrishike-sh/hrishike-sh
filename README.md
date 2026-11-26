@@ -1,6 +1,6 @@
 ## Hi there 👋
 
-![Profile Views](https://komarev.com/ghpvc/?username=hrishike-sh)
+![Profile Views](https://komarev.com/ghpvc/?username=hrishike-sh&color=red)
 
 Full-stack developer building web and desktop software for Studio Tim Fu, an architecture and design studio.
 
